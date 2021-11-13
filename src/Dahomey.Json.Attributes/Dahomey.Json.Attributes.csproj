@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <PackageReleaseNotes>cf. https://github.com/dahomey-technologies/Dahomey.Json.Attributes/releases/tag/$(Version)</PackageReleaseNotes>
+    <Authors>Michaël Catanzariti</Authors>
+    <Company>Dahomey Technologies</Company>
+    <Description>Attributes assembly for https://github.com/dahomey-technologies/Dahomey.Json</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/dahomey-technologies/Dahomey.Json.Attributes</PackageProjectUrl>
+    <PackageTags>serialization;json</PackageTags>
+    <RepositoryUrl>https://github.com/dahomey-technologies/Dahomey.Json.Attributes.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageIcon>icon.png</PackageIcon>
+    <Copyright>Copyright © Dahomey Technologies 2021</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="Nullable" Version="1.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Images\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>
